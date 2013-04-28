@@ -1,0 +1,14 @@
+{
+  "name": "sidebar",
+  "repo": "yields/sidebar",
+  "description": "sidebar implementation, inspired by OSX notification center.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}

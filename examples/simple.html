@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Simple left sidebar</title>
+    <script src='../build/build.js'></script>
+    <style>
+      body, html {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        background: #fff;
+        overflow-x: hidden;
+        transition: left .5s;
+      }
+
+      #left {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 200px;
+        left: -200px;
+        transition: left .5s;
+        border-right: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Open</button>
+    <div id='left'></div>
+
+    <script>
+      var Sidebar = require('sidebar');
+      var sidebar = new Sidebar(document.querySelector('#left'), 'left');
+      var button = document.querySelector('button');
+      button.onclick = sidebar.toggle.bind(sidebar);
+    </script>
+  </body>
+</html>
