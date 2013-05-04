@@ -29,7 +29,6 @@ function Sidebar(el, location){
   this.location = location || 'left';
   this.map = map[this.location];
   this.rect = el.getBoundingClientRect();
-  this.parent = el.parentNode;
   this.el = el;
 }
 
@@ -65,12 +64,11 @@ Sidebar.prototype.toggle = function(){
  */
 
 Sidebar.prototype.open = function(){
-  var parent = this.parent
+  var parent = this.el.parentNode
     , rect = this.rect
     , map = this.map
     , el = this.el
     , prect;
-
 
   prect = parent.getBoundingClientRect();
   parent.style.position = 'absolute';
