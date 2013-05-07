@@ -86,7 +86,7 @@ Sidebar.prototype.open = function(){
  */
 
 Sidebar.prototype.close = function(){
-  var parent = this.parent
+  var parent = this.el.parentNode
     , rect = this.rect
     , map = this.map
     , el = this.el;
